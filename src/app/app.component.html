@@ -2,9 +2,9 @@
 
 
 <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle value="bold" (click)="countDownCode()">Code</mat-button-toggle>
-  <mat-button-toggle value="italic" (click)="countDownSocial()">Social</mat-button-toggle>
-  <mat-button-toggle value="underline" (click)="countDownCoffee()">Coffee</mat-button-toggle>
+  <mat-button-toggle matTooltip="Code time" value="bold" (click)="countDownCode()">Code</mat-button-toggle>
+  <mat-button-toggle matTooltip="Social time" value="italic" (click)="countDownSocial()">Social</mat-button-toggle>
+  <mat-button-toggle matTooltip="Coffee time" value="underline" (click)="countDownCoffee()">Coffee</mat-button-toggle>
 </mat-button-toggle-group>
 
 <h1>{{counter}}</h1>

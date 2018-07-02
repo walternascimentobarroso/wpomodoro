@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { MatSnackBar } from "@angular/material";
 
 @Component({
   selector: "app-root",
@@ -8,11 +9,21 @@ import { Component } from "@angular/core";
 export class AppComponent {
   counter: any = "00:00:00";
   interval: any;
+
+  constructor(public snackBar: MatSnackBar) {}
+
+  openSnackBar(message: string) {
+    this.snackBar.open(message, "OK!", {
+      duration: 2000,
+    });
+  }
+
+
   countDownCode() {
     let time = 25 * 60;
     clearInterval(this.interval);
     this.countDown(time, () => {
-      alert("Finalizado!");
+      this.openSnackBar("Time code finish.");
     });
   }
 
@@ -20,7 +31,7 @@ export class AppComponent {
     let time = 15 * 60;
     clearInterval(this.interval);
     this.countDown(time, () => {
-      alert("Finalizado!");
+      this.openSnackBar("Time social finish.");
     });
   }
 
@@ -28,7 +39,7 @@ export class AppComponent {
     let time = 5 * 60;
     clearInterval(this.interval);
     this.countDown(time, () => {
-      alert("Finalizado!");
+      this.openSnackBar("Time coffee finish.");
     });
   }
 

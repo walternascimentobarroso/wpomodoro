@@ -11,6 +11,8 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
+  MatTooltipModule,
+  MatSnackBarModule,
   MatButtonToggleModule
 } from "@angular/material";
 
@@ -24,8 +26,10 @@ import {
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatButtonToggleModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule,
+    MatSnackBarModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
