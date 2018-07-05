@@ -1,10 +1,37 @@
 <menu-bar></menu-bar>
 
+<main>
+  <mat-button-toggle-group>
+    <mat-button-toggle (click)="countDownCode()" matTooltip="Code time">Code</mat-button-toggle>
+    <mat-button-toggle (click)="countDownSocial()" matTooltip="Social time">Social</mat-button-toggle>
+    <mat-button-toggle (click)="countDownCoffee()" matTooltip="Coffee time">Coffee</mat-button-toggle>
+  </mat-button-toggle-group>
 
-<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-  <mat-button-toggle matTooltip="Code time" value="bold" (click)="countDownCode()">Code</mat-button-toggle>
-  <mat-button-toggle matTooltip="Social time" value="italic" (click)="countDownSocial()">Social</mat-button-toggle>
-  <mat-button-toggle matTooltip="Coffee time" value="underline" (click)="countDownCoffee()">Coffee</mat-button-toggle>
-</mat-button-toggle-group>
+  <h1>{{counter}}</h1>
+</main>
 
-<h1>{{counter}}</h1>
+<footer>
+
+  <div fxLayout="row" fxLayout.xs="column" fxFlexFill>
+    <div fxFlex>
+      <h5>Técnica Pomodoro</h5>
+      <p>
+        A Técnica Pomodoro é um método de gerenciamento de tempo desenvolvido por Francesco Cirillo no final dos anos 1980. A técnica
+        consiste na utilização de um cronômetro para dividir o trabalho em períodos de 25 minutos, separados por breves intervalos.
+      </p>
+    </div>
+
+    <div fxFlex>
+      <h5 class="title">Download</h5>
+      <a href="#">
+        <img src="assets/download_android.png" width="200">
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2018 Copyright:
+    <a href="http://walternascimentobarroso.github.io"> Walter Nascimento Barroso </a>
+  </div>
+
+</footer>

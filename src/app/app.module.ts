@@ -5,6 +5,8 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MenuBarComponent } from "./menu-bar/menu-bar.component";
 import { LayoutModule } from "@angular/cdk/layout";
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 import {
   MatToolbarModule,
   MatButtonModule,
@@ -19,6 +21,7 @@ import {
 @NgModule({
   declarations: [AppComponent, MenuBarComponent],
   imports: [
+    FlexLayoutModule,
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
